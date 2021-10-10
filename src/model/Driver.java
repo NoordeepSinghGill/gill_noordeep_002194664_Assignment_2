@@ -22,7 +22,7 @@ public class Driver {
     private String color;
     private String city;
     private int serialnumber;
-    private int telephonenumber;
+    private Long telephonenumber;
     private String loginName; 
     
     //new change
@@ -114,12 +114,12 @@ public class Driver {
         this.serialnumber = serialnumber;
     }
 
-    public int getTelephonenumber() {
+    public Long getTelephonenumber() {
         return telephonenumber;
     }
 
     // Start : This is a new change
-    public void setTelephonenumber(int telephonenumber) {
+    public void setTelephonenumber(Long telephonenumber) {
         this.telephonenumber = telephonenumber;
     }    
 

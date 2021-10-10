@@ -282,11 +282,12 @@ public class CustomerJPanel extends javax.swing.JPanel {
                             .addComponent(dropdownYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSameYear))))
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSearch)
-                    .addComponent(btnQuickCheck)
-                    .addComponent(jLabel7)
-                    .addComponent(lblAvailCount))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSearch, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnQuickCheck)
+                        .addComponent(jLabel7)
+                        .addComponent(lblAvailCount)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -357,12 +358,14 @@ public class CustomerJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_dropdownStatesFocusLost
 
     private void btnHurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHurryActionPerformed
-       /* Collections.sort(customerlist, new Comparator<Driver>(){
-         @Override
-         public int compare(Driver o1, Driver o2){
-                return o1.getLatestavailable().compareTo(o2.getLatestavailable());
-            }
-        });*/
+        int index = tblDriverAvailable.getSelectedRow();
+        if(index < 0){
+            JOptionPane.showMessageDialog(this, "Please select a driver to ride with !");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) tblDriverAvailable.getModel();
+        Driver SelectedDriver = (Driver) model.getValueAt(index, 0);
+        model.removeRow(index);
     }//GEN-LAST:event_btnHurryActionPerformed
 
     private void btnSameCityDriverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSameCityDriverActionPerformed

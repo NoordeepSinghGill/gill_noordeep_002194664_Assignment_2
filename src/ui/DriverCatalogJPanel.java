@@ -408,12 +408,13 @@ public class DriverCatalogJPanel extends javax.swing.JPanel {
                             .addComponent(txtTelephoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblErrorTelephoneNumber))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel15)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel11)
+                                .addComponent(jLabel15))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addComponent(chkavailable, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -523,7 +524,7 @@ public class DriverCatalogJPanel extends javax.swing.JPanel {
                 vs.setDateofmanufacture(txtYearofManufacture.getText());
                 vs.setSeats(Integer.parseInt(txtSeats.getText()));
                 vs.setSerialnumber(Integer.parseInt(txtSerialNumber.getText()));
-                vs.setTelephonenumber(Integer.parseInt(txtTelephoneNumber.getText()));
+                vs.setTelephonenumber(Long.parseLong(txtTelephoneNumber.getText()));
                 vs.setAvailabledate(futureDate);
                 vs.setLatestavailable(datediff);
                 vs.setAvailabletowork(readytowork);
@@ -575,8 +576,7 @@ public class DriverCatalogJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtDriverNameKeyReleased
 
     private void txtYearofManufactureKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtYearofManufactureKeyReleased
-        String year = txtYearofManufacture.getText();
-      
+    
     }//GEN-LAST:event_txtYearofManufactureKeyReleased
 
     private void txtSeatsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSeatsKeyReleased

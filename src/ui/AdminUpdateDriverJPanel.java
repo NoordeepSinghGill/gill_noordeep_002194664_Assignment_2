@@ -260,7 +260,7 @@ public class AdminUpdateDriverJPanel extends javax.swing.JPanel {
                 vs.setDateofmanufacture(txtYearofManufacture.getText());
                 vs.setSeats(Integer.parseInt(txtSeats.getText()));
                 vs.setSerialnumber(Integer.parseInt(txtSerialNumber.getText()));
-                vs.setTelephonenumber(Integer.parseInt(txtTelephoneNumber.getText()));
+                vs.setTelephonenumber(Long.parseLong(txtTelephoneNumber.getText()));
             }
         }
         JOptionPane.showMessageDialog(this, "Information saved");

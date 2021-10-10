@@ -25,7 +25,7 @@ public class DriverDetails {
     private String adminupdatecolor;
     private String adminupdatecity;
     private int adminupdateserialnumber;
-    private int adminuodatetelephonenumber;
+    private Long adminuodatetelephonenumber;
     // new changes end here
     
     //update catalog date and time
@@ -124,11 +124,11 @@ public class DriverDetails {
         this.adminupdateserialnumber = adminupdateserialnumber;
     }
 
-    public int getAdminuodatetelephonenumber() {
+    public Long getAdminuodatetelephonenumber() {
         return adminuodatetelephonenumber;
     }
 
-    public void setAdminuodatetelephonenumber(int adminuodatetelephonenumber) {
+    public void setAdminuodatetelephonenumber(Long adminuodatetelephonenumber) {
         this.adminuodatetelephonenumber = adminuodatetelephonenumber;
     }
 
